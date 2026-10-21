@@ -1,0 +1,7 @@
+method,episode_id,start_step,sampled_index,success
+Flat,1694,63,209214,True
+Flat,12221,78,1529319,False
+Flat,14327,64,1805170,True
+Hierarchical,1694,63,209214,False
+Hierarchical,12221,78,1529319,False
+Hierarchical,14327,64,1805170,False

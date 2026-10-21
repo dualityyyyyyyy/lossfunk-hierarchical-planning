@@ -1,0 +1,65 @@
+{
+  "generated_utc": "2026-10-19T19:52:31.291865+00:00",
+  "project": "Lossfunk Autoresearch \u2014 Hi-LeWM PushT",
+  "research_question": "When controlling for local replanning and inference computation, does explicit hierarchical subgoal representation provide an additional reliability advantage over flat receding-horizon world-model planning, and how does this advantage scale with horizon?",
+  "baseline_validation": [
+    {
+      "horizon": 25,
+      "successes": 13,
+      "episodes": 15,
+      "published_mean": 0.94,
+      "success_rate": 0.8666666666666667,
+      "wilson95_low": 0.6211801716767764,
+      "wilson95_high": 0.9626387408969346
+    },
+    {
+      "horizon": 50,
+      "successes": 7,
+      "episodes": 15,
+      "published_mean": 0.527,
+      "success_rate": 0.4666666666666667,
+      "wilson95_low": 0.24809535365737387,
+      "wilson95_high": 0.698830199745016
+    },
+    {
+      "horizon": 75,
+      "successes": 3,
+      "episodes": 15,
+      "published_mean": null,
+      "success_rate": 0.2,
+      "wilson95_low": 0.07047549346981563,
+      "wilson95_high": 0.45185448715169363
+    }
+  ],
+  "matched_pilot": {
+    "source_file": "/content/drive/MyDrive/lossfunk_autoresearch/artifacts/matched_pilot_corrected/matched_pilot_results_corrected.json",
+    "same_episodes_and_starts": true,
+    "flat_successes": 2,
+    "flat_episodes": 3,
+    "flat_success_rate": 0.6666666666666666,
+    "hierarchical_successes": 0,
+    "hierarchical_episodes": 3,
+    "hierarchical_success_rate": 0.0,
+    "flat_runtime_seconds": 202.4234409030014,
+    "hierarchical_runtime_seconds": 34.263799706999635,
+    "flat_candidate_scores": 54000,
+    "hierarchical_high_candidate_scores": 108000,
+    "hierarchical_low_candidate_scores": 108000,
+    "hierarchical_total_candidate_scores": 216000,
+    "hierarchical_counter_valid": true,
+    "compute_matched": false
+  },
+  "limitations": [
+    "Compact baseline validation used 15 episodes per horizon, not the intended full evaluation.",
+    "The matched pilot used only three episodes at horizon 25.",
+    "The hierarchical method scored more candidate costs than the flat method in this pilot.",
+    "Candidate-score counts alone do not measure total inference compute.",
+    "Wall-clock time is implementation- and hardware-specific.",
+    "No definitive claim of hierarchical superiority or inferiority is supported.",
+    "Exact challenge-specific requirements in autoresearch-stage.md were not independently verified."
+  ],
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39"
+  }
+}
